@@ -11,7 +11,7 @@ const BestAudioGear = () => {
 			imageDirection='right'
 		>
 			<div className='py-4'>
-				<h2 className='mb-8'>
+				<h2 className='mb-8 heading-2'>
 					Bringing you the <span className='text-[#D87D4A]'>best</span> audio
 					gear
 				</h2>
