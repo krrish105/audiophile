@@ -1,0 +1,101 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: #000;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+h1,
+.heading-1 {
+	font-size: 2.25rem;
+	line-height: 2.5rem; /* 111.111% */
+	letter-spacing: 0.08038rem;
+}
+h2,
+.heading-2 {
+	font-size: 1.75rem;
+	line-height: normal;
+	letter-spacing: 0.0625rem;
+}
+
+h3,
+.heading-3 {
+	font-size: 2rem;
+	line-height: 2.25rem;
+	letter-spacing: 0.07144rem;
+}
+h4,
+h5,
+h6,
+.heading-4,
+.heading-5,
+.heading-6 {
+	line-height: normal;
+}
+h4,
+.heading-4 {
+	font-size: 1.75rem;
+	letter-spacing: 0.125rem;
+}
+h5,
+.heading-5 {
+	font-size: 1.5rem;
+	letter-spacing: 0.10713rem;
+}
+h6,
+.heading-6 {
+	font-size: 1.125rem;
+	letter-spacing: 0.08038rem;
+}
+
+button {
+	border: 0;
+	background-color: transparent;
+	padding: 0;
+}
+
+input {
+	outline: none;
+}
+
+picture {
+	display: block;
+}
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+.container {
+	max-width: 1110px !important;
+	@apply mx-auto;
+}
+section,
+.hero,
+.container.block__padding {
+	margin-bottom: 7rem;
+}
+
+@media (min-width: 768px) {
+	h1,
+	.heading-1 {
+		font-size: 3.5rem;
+		line-height: 3.625rem;
+		letter-spacing: 0.125rem;
+	}
+	h2,
+	.heading-2 {
+		font-size: 2.5rem;
+		line-height: 2.75rem;
+		letter-spacing: 0.08931rem;
+	}
+	section,
+	.hero,
+	.container.block__padding {
+		margin-bottom: 10.5rem;
+	}
+}

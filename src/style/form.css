@@ -1,0 +1,114 @@
+.form__group {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+.form__group label {
+	color: #000;
+	font-size: 0.75rem;
+	font-weight: 700;
+	line-height: normal;
+	letter-spacing: -0.01338rem;
+}
+.form__group input[type="email"],
+.form__group input[type="text"],
+.form__group input[type="password"] {
+	border-radius: 0.5rem;
+	border: 1px solid #cfcfcf;
+	background: #fff;
+	padding: 1.2rem 1.5rem;
+	outline: 0;
+	color: #000;
+	font-size: 0.875rem;
+	font-weight: 700;
+	line-height: normal;
+	letter-spacing: -0.01563rem;
+}
+.form__group input[type="email"]::placeholder,
+.form__group input[type="text"]::placeholder,
+.form__group input[type="password"]::placeholder {
+	opacity: 0.5;
+}
+.form__group input[type="email"]:focus,
+.form__group input[type="text"]:focus,
+.form__group input[type="password"]:focus,
+.form__group input[type="email"]:target,
+.form__group input[type="text"]:target,
+.form__group input[type="password"]:target,
+.form__group input[type="email"]:active,
+.form__group input[type="text"]:active,
+.form__group input[type="password"]:active {
+	border-radius: 0.5rem;
+	border: 1px solid #d87d4a;
+	background: #fff;
+}
+
+.form__group.radio__btn {
+	width: fit-content;
+	display: flex;
+	flex-direction: row-reverse;
+	border-radius: 0.5rem;
+	border: 1px solid #cfcfcf;
+	background: #fff;
+	padding: 1.2rem;
+}
+/* Add hover border on radio button container */
+.form__group input[type="radio"] {
+	accent-color: #d87d4a;
+}
+
+.form__group.has__error input {
+	border-radius: 0.5rem;
+	border: 2px solid #cd2c2c;
+	background: #fff;
+}
+.form__group.has__error > div {
+	display: flex;
+	justify-content: space-between;
+	line-height: normal;
+}
+.form__group.has__error > div label,
+.form__group.has__error > div .error {
+	color: #cd2c2c;
+}
+
+.form__group.has__error > div .error {
+	text-align: right;
+	font-size: 0.75rem;
+	font-weight: 500;
+	letter-spacing: -0.01338rem;
+}
+
+.form__group.qty__selector {
+	background: #f1f1f1;
+}
+
+.form__group.qty__selector button {
+	color: #000;
+	letter-spacing: 0.0625rem;
+	opacity: 0.25;
+}
+.form__group.qty__selector button:hover {
+	color: #d87d4a;
+	opacity: 1;
+}
+.form__group.qty__selector input[type="number"] {
+	-moz-appearance: textfield;
+	max-width: 50px;
+	background: #f1f1f1;
+	letter-spacing: 0.0625rem;
+}
+.form__group.qty__selector input[type="number"]::-webkit-inner-spin-button,
+.form__group.qty__selector input[type="number"]::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+.form__group.qty__selector.small {
+	padding: 0.5rem;
+	height: 2rem;
+}
+.form__group.qty__selector.small input {
+	font-size: 0.8rem;
+	max-width: 30px;
+}

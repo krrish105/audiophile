@@ -1,0 +1,15 @@
+:root {
+	/* Primary Colors */
+	--primary-orange: #d87d4a;
+	--primary-black: #101010;
+	--primary-grey: #f1f1f1;
+	--primary-white: #fafafa;
+
+	/* Secondary Colors */
+	--secondary-orange: #fbaf85;
+	--secondary-white: #fff;
+	--secondary-black: #000;
+
+	/* Custom */
+	--black-bg: #191919;
+}
