@@ -20,7 +20,7 @@ const Footer = () => {
 					<p className='text-neutral-500 md:row-start-2'>
 						Copyright 2021. All Rights Reserved
 					</p>
-					<ul className='flex gap-4 items-center mx-auto sm:mr-0'>
+					<ul className='flex gap-4 items-center mx-auto sm:mr-0 social__links'>
 						<li>
 							<a href='/'>
 								<Image

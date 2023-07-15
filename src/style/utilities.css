@@ -44,6 +44,13 @@
 	color: white;
 	background-color: black;
 }
+.btn-black {
+	color: white;
+	background-color: black;
+}
+.btn-black:hover {
+	background: #4c4c4c;
+}
 .btn-transparent,
 .link-transparent {
 	color: #000;

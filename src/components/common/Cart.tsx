@@ -23,7 +23,9 @@ const Cart = () => {
 					alt='AudioPhile Logo'
 				/>
 			</button>
-			<CartPopup visible={cartOpen} setVisible={openCartHandler} />
+			{cartOpen && (
+				<CartPopup visible={cartOpen} setVisible={openCartHandler} />
+			)}
 		</div>
 	);
 };

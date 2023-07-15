@@ -23,7 +23,7 @@ const ProductDesc = ({
 			<p className='mt-6 text-neutral-500'>{description}</p>
 			{location === "product" ? (
 				<>
-					<span className='block mt-8'>$ 2,999</span>
+					<strong className='block mt-8 text-lg'>$ 2,999</strong>
 					<div className='flex gap-4 mt-12 flex-wrap'>
 						<QtySelector value={1} size='big' />
 						<button className='btn btn-orange'>Add to Cart</button>

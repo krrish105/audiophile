@@ -8,9 +8,6 @@ const Navigation = () => {
 	const [mobileNavVisible, isMobileNavVisible] = useState(false);
 
 	const mobileNavVisibleHandler = () => {
-		document
-			.querySelector("body")
-			?.setAttribute("data-nav-open", `${!mobileNavVisible}`);
 		isMobileNavVisible((prev) => !prev);
 	};
 
@@ -27,6 +24,9 @@ const Navigation = () => {
 					alt='Open Navigation Menu'
 				/>
 			</button>
+			{mobileNavVisible && (
+				<div className='backdrop' onClick={mobileNavVisibleHandler}></div>
+			)}
 			{mobileNavVisible ? <MobileNavigationBar /> : <LaptopNavigationBar />}
 		</nav>
 	);
