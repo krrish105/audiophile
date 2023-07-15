@@ -1,4 +1,12 @@
-const InputElement = ({ type, name, id, required, label, value }: any) => {
+const InputElement = ({
+	type,
+	name,
+	id,
+	required,
+	label,
+	value,
+	placeholder,
+}: any) => {
 	return (
 		<div className='form__group'>
 			<label htmlFor={id}>{label}</label>
@@ -7,7 +15,8 @@ const InputElement = ({ type, name, id, required, label, value }: any) => {
 				name={name}
 				id={id}
 				aria-required={required}
-				value={value}
+				defaultValue={value}
+				placeholder={placeholder}
 			/>
 		</div>
 	);

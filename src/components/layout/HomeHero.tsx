@@ -11,6 +11,7 @@ const HomeHero = () => {
 						description='Experience natural, lifelike audio and exceptional build quality
 						made for the passionate music enthusiast.'
 						url='/category/headphones/product/XX99 Mark II'
+						location='home'
 					/>
 				</div>
 

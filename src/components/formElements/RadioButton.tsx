@@ -1,9 +1,25 @@
-const RadioButton = ({ name, id, required, label, checked, value }: any) => {
+const RadioButton = ({
+	name,
+	id,
+	required,
+	label,
+	checked = false,
+	value,
+	changeHandler,
+}: any) => {
 	return (
-		<div className='form__group radio__btn'>
-			<label htmlFor={id}>{label}</label>
-			<input type='radio' name={name} id={id} checked={checked} value={value} />
-		</div>
+		<label className='form__group radio__btn' htmlFor={id}>
+			<span>{label}</span>
+			<input
+				type='radio'
+				name={name}
+				id={id}
+				defaultChecked={checked}
+				defaultValue={value}
+				onChange={(e) => changeHandler(e)}
+				// aria-required={required}
+			/>
+		</label>
 	);
 };
 

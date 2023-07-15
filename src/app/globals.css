@@ -122,11 +122,11 @@ footer > div::before {
 	content: "";
 	position: absolute;
 	top: 0;
-	left: 1rem;
+	left: 0;
 	width: 6.3125rem;
 	height: 0.25rem;
 	background: #d87d4a;
-	@apply left-1/2 -translate-x-1/2 sm:left-4 sm:-translate-x-0;
+	@apply left-1/2 -translate-x-1/2 sm:left-0 sm:-translate-x-0;
 }
 
 .hero .product__desc {
@@ -140,6 +140,11 @@ footer > div::before {
 	@apply text-neutral-500 !important;
 }
 
+.product__list li span {
+	color: #d87d4a;
+	font-weight: 700;
+	padding-right: 1.5rem;
+}
 @media (min-width: 480px) {
 	.cart__popup {
 		left: auto;

@@ -25,6 +25,7 @@ const Category = ({ params }: { params: { name: string } }) => {
 					name='XX99 Mark II Headphones'
 					description='The new XX99 Mark II headphones is the pinnacle of pristine audio. It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound.'
 					url='/category/headphones/product/XX99 Mark II'
+					location='category'
 				/>
 			</TextImage>
 			<TextImage
@@ -39,6 +40,7 @@ const Category = ({ params }: { params: { name: string } }) => {
 					name='XX99 Mark II Headphones'
 					description='The new XX99 Mark II headphones is the pinnacle of pristine audio. It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound.'
 					url='/category/headphones/product/XX99 Mark II'
+					location='category'
 				/>
 			</TextImage>
 			<TextImage
@@ -53,6 +55,7 @@ const Category = ({ params }: { params: { name: string } }) => {
 					name='XX99 Mark II Headphones'
 					description='The new XX99 Mark II headphones is the pinnacle of pristine audio. It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound.'
 					url='/category/headphones/product/XX99 Mark II'
+					location='category'
 				/>
 			</TextImage>
 			<section>
