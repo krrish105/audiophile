@@ -11,13 +11,13 @@ const Footer = () => {
 					<LaptopNavigationBar />
 				</div>
 				<div className='mt-9 grid gap-12 text-center sm:text-start sm:gap-4 sm:grid-cols-[auto_auto] md:grid-cols-2 md:grid-rows-[auto_auto]'>
-					<p className='text-neutral-500 sm:col-span-2 md:col-span-1'>
+					<p className='text-neutral-400 sm:col-span-2 md:col-span-1'>
 						Audiophile is an all in one stop to fulfill your audio needs.
 						We&#39;re a small team of music lovers and sound specialists who are
 						devoted to helping you get the most out of personal audio. Come and
 						visit our demo facility - we’re open 7 days a week.
 					</p>
-					<p className='text-neutral-500 md:row-start-2'>
+					<p className='text-neutral-400 md:row-start-2'>
 						Copyright 2021. All Rights Reserved
 					</p>
 					<ul className='flex gap-4 items-center mx-auto sm:mr-0 social__links'>

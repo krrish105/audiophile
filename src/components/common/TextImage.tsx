@@ -25,8 +25,8 @@ const TextImage = ({
 					imageDirection === "right" ? "md:order-2" : "md:order-1"
 				}`}
 			>
-				<source media='(min-width: 480px)' src={image[0]} />
-				<source media='(min-width: 768px)' src={image[1]} />
+				<source media='(min-width: 480px)' srcSet={image[0]} />
+				<source media='(min-width: 768px)' srcSet={image[1]} />
 				<Image
 					src={image[2]}
 					width={540}

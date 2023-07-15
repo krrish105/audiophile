@@ -7,11 +7,11 @@ const Banners = () => {
 				<picture className='row-start-1'>
 					<source
 						media='(min-width: 480px)'
-						src='/assets/product-xx99-mark-one-headphones/mobile/image-gallery-1.jpg'
+						srcSet='/assets/product-xx99-mark-one-headphones/mobile/image-gallery-1.jpg'
 					/>
 					<source
 						media='(min-width: 768px)'
-						src='/assets/product-xx99-mark-one-headphones/tablet/image-gallery-1.jpg'
+						srcSet='/assets/product-xx99-mark-one-headphones/tablet/image-gallery-1.jpg'
 					/>
 					<Image
 						src='/assets/product-xx99-mark-one-headphones/desktop/image-gallery-1.jpg'
@@ -24,11 +24,11 @@ const Banners = () => {
 				<picture className='row-start-2'>
 					<source
 						media='(min-width: 480px)'
-						src='/assets/product-xx99-mark-one-headphones/mobile/image-gallery-2.jpg'
+						srcSet='/assets/product-xx99-mark-one-headphones/mobile/image-gallery-2.jpg'
 					/>
 					<source
 						media='(min-width: 768px)'
-						src='/assets/product-xx99-mark-one-headphones/tablet/image-gallery-2.jpg'
+						srcSet='/assets/product-xx99-mark-one-headphones/tablet/image-gallery-2.jpg'
 					/>
 					<Image
 						src='/assets/product-xx99-mark-one-headphones/desktop/image-gallery-2.jpg'
@@ -41,11 +41,11 @@ const Banners = () => {
 				<picture className='row-span-2'>
 					<source
 						media='(min-width: 480px)'
-						src='/assets/product-xx99-mark-one-headphones/mobile/image-gallery-3.jpg'
+						srcSet='/assets/product-xx99-mark-one-headphones/mobile/image-gallery-3.jpg'
 					/>
 					<source
 						media='(min-width: 768px)'
-						src='/assets/product-xx99-mark-one-headphones/tablet/image-gallery-3.jpg'
+						srcSet='/assets/product-xx99-mark-one-headphones/tablet/image-gallery-3.jpg'
 					/>
 					<Image
 						src='/assets/product-xx99-mark-one-headphones/desktop/image-gallery-3.jpg'

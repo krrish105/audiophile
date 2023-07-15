@@ -7,15 +7,15 @@ const Card = () => {
 			<picture>
 				<source
 					media='(min-width: 768px)'
-					src='/assets/product-xx99-mark-one-headphones/desktop/image-product.jpg'
+					srcSet='/assets/product-xx99-mark-one-headphones/desktop/image-product.jpg'
 				/>
 				<source
 					media='(min-width: 480px)'
-					src='/assets/product-xx99-mark-one-headphones/tablet/image-product.jpg'
+					srcSet='/assets/product-xx99-mark-one-headphones/tablet/image-product.jpg'
 				/>
 				<source
 					media='(min-width: 1px)'
-					src='/assets/product-xx99-mark-one-headphones/mobile/image-product.jpg'
+					srcSet='/assets/product-xx99-mark-one-headphones/mobile/image-product.jpg'
 				/>
 				<Image
 					src='/assets/product-xx99-mark-one-headphones/desktop/image-product.jpg'

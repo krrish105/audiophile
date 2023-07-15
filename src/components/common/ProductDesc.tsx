@@ -20,7 +20,7 @@ const ProductDesc = ({
 		>
 			<span className='text-[#D87D4A]'>NEW PRODUCT</span>
 			<h2 className='mt-6 heading-1'>{name}</h2>
-			<p className='mt-6 text-neutral-500'>{description}</p>
+			<p className='mt-6 text-neutral-400'>{description}</p>
 			{location === "product" ? (
 				<>
 					<strong className='block mt-8 text-lg'>$ 2,999</strong>

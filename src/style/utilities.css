@@ -32,7 +32,10 @@
 	color: #fff;
 	background: #d87d4a;
 }
-.btn-orange:hover {
+.btn-orange:hover,
+.btn-orange:target,
+.btn-orange:active,
+.btn-orange:focus {
 	background: #fbaf85;
 }
 .btn-white {
@@ -40,7 +43,10 @@
 	background-color: white;
 	border: 1px solid #000;
 }
-.btn-white:hover {
+.btn-white:hover,
+.btn-white:target,
+.btn-white:active,
+.btn-white:focus {
 	color: white;
 	background-color: black;
 }
@@ -48,19 +54,24 @@
 	color: white;
 	background-color: black;
 }
-.btn-black:hover {
+.btn-black:hover,
+.btn-black:target,
+.btn-black:active,
+.btn-black:focus {
 	background: #4c4c4c;
 }
 .btn-transparent,
 .link-transparent {
-	color: #000;
-	opacity: 0.5;
+	@apply text-neutral-400;
 	display: flex;
 	align-items: center;
 	gap: 0.8rem;
 }
 
-.btn-transparent:hover {
+.btn-transparent:hover,
+.btn-transparent:target,
+.btn-transparent:active,
+.btn-transparent:focus {
 	color: #d87d4a;
 }
 .btn-transparent span {

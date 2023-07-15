@@ -50,7 +50,10 @@ a {
 	text-transform: uppercase;
 	transition: 0.2s ease-in-out;
 }
-a:hover:not(.btn) {
+a:hover:not(.btn),
+a:focus:not(.btn),
+a:target:not(.btn),
+a:active:not(.btn) {
 	color: #d87d4a;
 }
 /* Header */
@@ -120,7 +123,7 @@ footer > div::before {
 	color: white;
 }
 .hero .product__desc span {
-	@apply text-neutral-500 !important;
+	@apply text-neutral-400 !important;
 }
 
 .product__list li span {
@@ -131,7 +134,10 @@ footer > div::before {
 .social__links img {
 	transition: 0.2s ease-in-out;
 }
-.social__links img:hover {
+.social__links a:hover img,
+.social__links a:focus img,
+.social__links a:active img,
+.social__links a:target img {
 	filter: invert(52%) sepia(30%) saturate(815%) hue-rotate(338deg)
 		brightness(99%) contrast(102%);
 }
