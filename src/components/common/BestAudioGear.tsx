@@ -4,9 +4,9 @@ const BestAudioGear = () => {
 	return (
 		<TextImage
 			image={[
-				"/assets/shared/mobile/image-best-gear.jpg",
-				"/assets/shared/tablet/image-best-gear.jpg",
 				"/assets/shared/desktop/image-best-gear.jpg",
+				"/assets/shared/tablet/image-best-gear.jpg",
+				"/assets/shared/mobile/image-best-gear.jpg",
 			]}
 			imageDirection='right'
 		>

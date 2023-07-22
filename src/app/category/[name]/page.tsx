@@ -15,9 +15,9 @@ const Category = ({ params }: { params: { name: string } }) => {
 			</div>
 			<TextImage
 				image={[
-					"/assets/product-xx99-mark-one-headphones/mobile/image-product.jpg",
-					"/assets/product-xx99-mark-one-headphones/tablet/image-product.jpg",
 					"/assets/product-xx99-mark-one-headphones/desktop/image-product.jpg",
+					"/assets/product-xx99-mark-one-headphones/tablet/image-product.jpg",
+					"/assets/product-xx99-mark-one-headphones/mobile/image-product.jpg",
 				]}
 				imageDirection='left'
 			>
@@ -30,9 +30,9 @@ const Category = ({ params }: { params: { name: string } }) => {
 			</TextImage>
 			<TextImage
 				image={[
-					"/assets/product-xx99-mark-one-headphones/mobile/image-product.jpg",
-					"/assets/product-xx99-mark-one-headphones/tablet/image-product.jpg",
 					"/assets/product-xx99-mark-one-headphones/desktop/image-product.jpg",
+					"/assets/product-xx99-mark-one-headphones/tablet/image-product.jpg",
+					"/assets/product-xx99-mark-one-headphones/mobile/image-product.jpg",
 				]}
 				imageDirection='right'
 			>
@@ -45,9 +45,9 @@ const Category = ({ params }: { params: { name: string } }) => {
 			</TextImage>
 			<TextImage
 				image={[
-					"/assets/product-xx99-mark-one-headphones/mobile/image-product.jpg",
-					"/assets/product-xx99-mark-one-headphones/tablet/image-product.jpg",
 					"/assets/product-xx99-mark-one-headphones/desktop/image-product.jpg",
+					"/assets/product-xx99-mark-one-headphones/tablet/image-product.jpg",
+					"/assets/product-xx99-mark-one-headphones/mobile/image-product.jpg",
 				]}
 				imageDirection='left'
 			>

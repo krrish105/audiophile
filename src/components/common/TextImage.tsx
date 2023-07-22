@@ -1,3 +1,4 @@
+import ResponsiveImage from "@/components/common/ResponsiveImage";
 import Image from "next/image";
 
 const TextImage = ({
@@ -20,21 +21,16 @@ const TextImage = ({
 			>
 				{children}
 			</div>
-			<picture
-				className={`rounded-lg ${
+			<ResponsiveImage
+				images={[...image]}
+				width={540}
+				height={580}
+				altText=''
+				pictureClassName={`rounded-lg ${
 					imageDirection === "right" ? "md:order-2" : "md:order-1"
 				}`}
-			>
-				<source media='(min-width: 480px)' srcSet={image[0]} />
-				<source media='(min-width: 768px)' srcSet={image[1]} />
-				<Image
-					src={image[2]}
-					width={540}
-					height={580}
-					alt=''
-					className='w-full rounded-lg'
-				/>
-			</picture>
+				imgClassName='w-full rounded-lg max-h-[500px] object-cover'
+			/>
 		</article>
 	);
 };

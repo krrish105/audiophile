@@ -18,9 +18,9 @@ const Product = ({ params }: { params: { productName: string } }) => {
 
 			<Main
 				image={[
-					"/assets/product-xx99-mark-one-headphones/mobile/image-product.jpg",
-					"/assets/product-xx99-mark-one-headphones/tablet/image-product.jpg",
 					"/assets/product-xx99-mark-one-headphones/desktop/image-product.jpg",
+					"/assets/product-xx99-mark-one-headphones/tablet/image-product.jpg",
+					"/assets/product-xx99-mark-one-headphones/mobile/image-product.jpg",
 				]}
 			>
 				<ProductDesc

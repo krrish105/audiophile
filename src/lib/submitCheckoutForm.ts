@@ -1,5 +1,5 @@
-const submitHandler = (e: any, setOrderPlaced: any) => {
+const submitHandler = (e: any, orderPlacedHandler: any) => {
 	e.preventDefault();
-	setOrderPlaced();
+	orderPlacedHandler();
 };
 export default submitHandler;
