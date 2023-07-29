@@ -26,7 +26,7 @@ const HomeHero = () => {
 					width={600}
 					height={600}
 					pictureClassName={
-						"rounded-lg md:order-2 absolute inset-0 -top-28 -z-10"
+						"rounded-lg md:order-2 absolute inset-0 -top-28 -z-10 max-w-[1440px] mx-auto"
 					}
 					imgClassName={"w-full rounded-lg h-full"}
 				/>

@@ -14,10 +14,13 @@ const QtySelector = ({ value, size }: { value: any; size: string }) => {
 			>
 				<span>-</span>
 			</button>
+			<label htmlFor='quantity' className='sr-only'>
+				Quantity
+			</label>
 			<input
 				type='number'
-				name='number'
-				id='number'
+				name='quantity'
+				id='quantity'
 				min={1}
 				value={qty}
 				className='text-center border-0 text-base font-bold leading-normal'

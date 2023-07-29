@@ -33,7 +33,7 @@ const ProductInfo = ({
 				{location === "checkout" ? (
 					<strong className='block text-neutral-500'>1x</strong>
 				) : (
-					<QtySelector size='small' value={1} />
+					location !== "dashboard" && <QtySelector size='small' value={1} />
 				)}
 			</div>
 		</div>

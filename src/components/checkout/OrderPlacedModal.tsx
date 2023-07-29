@@ -10,7 +10,7 @@ const OrderPlacedModal = ({ setOrderPlaced }: any) => {
 	return (
 		<>
 			<div className='backdrop' onClick={() => setOrderPlaced()}></div>
-			<aside className='fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white p-8 sm:p-12 z-[1000] rounded-lg min-w-[300px]'>
+			<aside className='fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white p-8 sm:p-12 z-[1000] rounded-lg min-w-[300px] sm:min-w-[400px]'>
 				<div>
 					<Image
 						src='/assets/checkout/icon-order-confirmation.svg'

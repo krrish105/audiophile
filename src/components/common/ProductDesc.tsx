@@ -19,7 +19,11 @@ const ProductDesc = ({
 			}`}
 		>
 			<span className='text-[#D87D4A]'>NEW PRODUCT</span>
-			<h2 className='mt-6 heading-1'>{name}</h2>
+			{location === "product" ? (
+				<h1 className='mt-6 heading-1'>{name}</h1>
+			) : (
+				<h2 className='mt-6 heading-1'>{name}</h2>
+			)}
 			<p className='mt-6 text-neutral-400'>{description}</p>
 			{location === "product" ? (
 				<>

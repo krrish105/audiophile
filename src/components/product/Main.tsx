@@ -1,5 +1,4 @@
 import ResponsiveImage from "@/components/common/ResponsiveImage";
-import Image from "next/image";
 
 const Main = ({
 	children,
