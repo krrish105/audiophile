@@ -18,6 +18,10 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang='en'>
+			<head>
+				<meta name='theme-color' content='#000' />
+				<link rel='manifest' href='/manifest.json' />
+			</head>
 			<body className={manrope.className} data-cart-open='false'>
 				<Header dashboard={true} />
 				<main className='container'>{children}</main>

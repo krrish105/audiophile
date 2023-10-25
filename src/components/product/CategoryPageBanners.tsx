@@ -1,7 +1,6 @@
 import ResponsiveImage from "@/components/common/ResponsiveImage";
-import Image from "next/image";
 
-const Banners = () => {
+const CategoryPageBanners = () => {
 	return (
 		<div className='container block__padding'>
 			<div className='grid sm:grid-cols-[auto_auto] sm:grid-rows-2 gap-4 md:gap-8'>
@@ -45,4 +44,4 @@ const Banners = () => {
 		</div>
 	);
 };
-export default Banners;
+export default CategoryPageBanners;

@@ -17,7 +17,7 @@ const Footer = ({ dashboard }: { dashboard: boolean }) => {
 						devoted to helping you get the most out of personal audio. Come and
 						visit our demo facility - we’re open 7 days a week.
 					</p>
-					<p className='text-neutral-400 md:row-start-2'>
+					<p className='text-neutral-400 whitespace-nowrap md:row-start-2'>
 						Copyright {new Date().getFullYear()}. All Rights Reserved
 					</p>
 					<ul className='flex gap-4 items-center mx-auto sm:mr-0 social__links'>

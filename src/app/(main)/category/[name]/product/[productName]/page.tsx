@@ -4,7 +4,7 @@ import BestAudioGear from "@/components/common/BestAudioGear";
 import ProductDesc from "@/components/common/ProductDesc";
 import Description from "@/components/product/Description";
 import Main from "@/components/product/Main";
-import Banners from "@/components/product/Banners";
+import CategoryPageBanners from "@/components/product/CategoryPageBanners";
 import Recommendation from "@/components/product/Recommendation";
 
 const Product = ({ params }: { params: { productName: string } }) => {
@@ -32,7 +32,7 @@ const Product = ({ params }: { params: { productName: string } }) => {
 				/>
 			</Main>
 			<Description />
-			<Banners />
+			<CategoryPageBanners />
 			<Recommendation />
 
 			<section>

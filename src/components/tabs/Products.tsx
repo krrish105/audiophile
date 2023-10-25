@@ -1,10 +1,16 @@
 import ProductInfo from "@/components/common/ProductInfo";
 import Image from "next/image";
+import Link from "next/link";
 
 const Products = ({ visible }: { visible: boolean }) => {
 	return (
 		<div id='products' className={`${visible ? "block" : "hidden"}`}>
-			<button className='btn btn-transparent ml-auto px-0'>Add Product</button>
+			<Link
+				href='/dashboard/products/create'
+				className='btn btn-transparent ml-auto px-0 w-fit'
+			>
+				Add Product
+			</Link>
 			<div>
 				<details className='mt-8 dashboard__products' open>
 					<summary>

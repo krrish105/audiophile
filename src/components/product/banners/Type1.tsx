@@ -1,8 +1,7 @@
 import ResponsiveImage from "@/components/common/ResponsiveImage";
-import Image from "next/image";
 import Link from "next/link";
 
-const OrangeBanner = () => {
+const Type1 = () => {
 	return (
 		<div className='rounded-lg bg-[#D87D4A] py-14 px-6 overflow-hidden mb-12 md:p-24 md:pb-0'>
 			<div className='flex items-center gap-32 flex-col md:flex-row'>
@@ -32,4 +31,4 @@ const OrangeBanner = () => {
 		</div>
 	);
 };
-export default OrangeBanner;
+export default Type1;

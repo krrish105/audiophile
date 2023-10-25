@@ -40,7 +40,7 @@
 }
 .btn-white {
 	color: #000;
-	background-color: white;
+	background-color: transparent;
 	border: 1px solid #000;
 }
 .btn-white:hover,

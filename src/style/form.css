@@ -14,7 +14,8 @@ label.form__group {
 .form__group input[type="email"],
 .form__group input[type="text"],
 .form__group input[type="password"],
-.form__group input[type="tel"] {
+.form__group input[type="tel"],
+textarea {
 	border-radius: 0.5rem;
 	border: 1px solid #cfcfcf;
 	background: #fff;
@@ -29,7 +30,8 @@ label.form__group {
 }
 .form__group input[type="email"]::placeholder,
 .form__group input[type="text"]::placeholder,
-.form__group input[type="password"]::placeholder {
+.form__group input[type="password"]::placeholder,
+textarea::placeholder {
 	opacity: 0.5;
 }
 .form__group input[type="email"]:focus,
@@ -40,7 +42,8 @@ label.form__group {
 .form__group input[type="password"]:target,
 .form__group input[type="email"]:active,
 .form__group input[type="text"]:active,
-.form__group input[type="password"]:active {
+.form__group input[type="password"]:active,
+textarea:active {
 	border-radius: 0.5rem;
 	border: 1px solid #d87d4a;
 	background: #fff;
