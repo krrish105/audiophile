@@ -47,7 +47,9 @@ const STRINGS = {
 			},
 			eMoney: {
 				number: `e-Money Number`,
+				numberPlaceholder: `238521993`,
 				pin: `e-Money Pin`,
+				pinPlaceholder: `6891`,
 			},
 			cash: {
 				desc: `The ‘Cash on Delivery’ option enables you to pay in cash when our delivery courier arrives at your residence. Just make sure your address is correct so that your order will not be cancelled.`,

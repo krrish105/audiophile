@@ -5,7 +5,11 @@ const Main = ({
 	image,
 }: {
 	children: React.ReactNode;
-	image: Array<string>;
+	image: {
+		mobile: string;
+		tablet: string;
+		desktop: string;
+	};
 }) => {
 	return (
 		<section
@@ -13,7 +17,7 @@ const Main = ({
 		>
 			<div className={`order-1`}>{children}</div>
 			<ResponsiveImage
-				images={[...image]}
+				images={image}
 				altText={""}
 				width={540}
 				height={580}

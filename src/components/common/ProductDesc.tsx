@@ -6,11 +6,15 @@ const ProductDesc = ({
 	description,
 	url,
 	location,
+	isNew,
+	price,
 }: {
 	name: string;
 	description: string;
 	url: string;
 	location: string;
+	isNew: boolean;
+	price: number;
 }) => {
 	return (
 		<div
@@ -18,7 +22,7 @@ const ProductDesc = ({
 				location === "product" ? "text-start" : "text-center md:text-start"
 			}`}
 		>
-			<span className='text-[#D87D4A]'>NEW PRODUCT</span>
+			{isNew && <span className='text-[#D87D4A]'>NEW PRODUCT</span>}
 			{location === "product" ? (
 				<h1 className='mt-6 heading-1'>{name}</h1>
 			) : (
@@ -27,7 +31,7 @@ const ProductDesc = ({
 			<p className='mt-6 text-neutral-400'>{description}</p>
 			{location === "product" ? (
 				<>
-					<strong className='block mt-8 text-lg'>$ 2,999</strong>
+					<strong className='block mt-8 text-lg'>${price}</strong>
 					<div className='flex gap-4 mt-12 flex-wrap'>
 						<QtySelector value={1} size='big' />
 						<button className='btn btn-orange'>Add to Cart</button>

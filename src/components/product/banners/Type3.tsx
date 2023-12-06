@@ -6,11 +6,11 @@ const Type3 = () => {
 		<div className='relative overflow-hidden mb-12'>
 			<div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
 				<ResponsiveImage
-					images={[
-						"/assets/home/desktop/image-earphones-yx1.jpg",
-						"/assets/home/tablet/image-earphones-yx1.jpg",
-						"/assets/home/mobile/image-earphones-yx1.jpg",
-					]}
+					images={{
+						mobile: "/assets/home/mobile/image-earphones-yx1.jpg",
+						tablet: "/assets/home/tablet/image-earphones-yx1.jpg",
+						desktop: "/assets/home/desktop/image-earphones-yx1.jpg",
+					}}
 					width={540}
 					height={320}
 					imgClassName={"rounded-lg w-full md:w-auto"}

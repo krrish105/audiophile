@@ -3,11 +3,11 @@ import TextImage from "@/components/common/TextImage";
 const BestAudioGear = () => {
 	return (
 		<TextImage
-			image={[
-				"/assets/shared/desktop/image-best-gear.jpg",
-				"/assets/shared/tablet/image-best-gear.jpg",
-				"/assets/shared/mobile/image-best-gear.jpg",
-			]}
+			image={{
+				mobile: "/assets/shared/mobile/image-best-gear.jpg",
+				tablet: "/assets/shared/tablet/image-best-gear.jpg",
+				desktop: "/assets/shared/desktop/image-best-gear.jpg",
+			}}
 			imageDirection='right'
 		>
 			<div className='py-4'>

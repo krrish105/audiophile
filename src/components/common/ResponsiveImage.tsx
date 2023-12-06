@@ -1,5 +1,18 @@
 import Image from "next/image";
 
+interface Data {
+	images: {
+		mobile: string;
+		tablet: string;
+		desktop: string;
+	};
+	altText: string;
+	width: number;
+	height: number;
+	pictureClassName: any | null | undefined;
+	imgClassName: any | null | undefined;
+}
+
 const ResponsiveImage = ({
 	images,
 	altText,
@@ -7,21 +20,14 @@ const ResponsiveImage = ({
 	height,
 	pictureClassName,
 	imgClassName,
-}: {
-	images: Array<string>;
-	altText: string;
-	width: number;
-	height: number;
-	pictureClassName: any | null | undefined;
-	imgClassName: any | null | undefined;
-}) => {
+}: Data) => {
 	return (
 		<picture className={pictureClassName}>
-			<source media='(min-width: 768px)' srcSet={images[0]} />
-			<source media='(min-width: 480px)' srcSet={images[1]} />
-			<source media='(min-width: 1px)' srcSet={images[2]} />
+			<source media='(min-width: 768px)' srcSet={images.desktop} />
+			<source media='(min-width: 480px)' srcSet={images.tablet} />
+			<source media='(min-width: 1px)' srcSet={images.mobile} />
 			<Image
-				src={images[2]}
+				src={images.mobile}
 				alt={altText}
 				width={width}
 				height={height}

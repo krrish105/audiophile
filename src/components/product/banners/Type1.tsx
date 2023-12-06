@@ -6,11 +6,11 @@ const Type1 = () => {
 		<div className='rounded-lg bg-[#D87D4A] py-14 px-6 overflow-hidden mb-12 md:p-24 md:pb-0'>
 			<div className='flex items-center gap-32 flex-col md:flex-row'>
 				<ResponsiveImage
-					images={[
-						"/assets/home/desktop/image-speaker-zx9.png",
-						"/assets/home/tablet/image-speaker-zx9.png",
-						"/assets/home/mobile/image-speaker-zx9.png",
-					]}
+					images={{
+						mobile: "/assets/home/mobile/image-speaker-zx9.png",
+						tablet: "/assets/home/tablet/image-speaker-zx9.png",
+						desktop: "/assets/home/desktop/image-speaker-zx9.png",
+					}}
 					width={410}
 					height={490}
 					imgClassName={"-mb-5"}

@@ -18,11 +18,11 @@ const Type3 = () => {
 				</div>
 			</div>
 			<ResponsiveImage
-				images={[
-					"/assets/home/desktop/image-speaker-zx7.jpg",
-					"/assets/home/tablet/image-speaker-zx7.jpg",
-					"/assets/home/mobile/image-speaker-zx7.jpg",
-				]}
+				images={{
+					mobile: "/assets/home/mobile/image-speaker-zx7.jpg",
+					tablet: "/assets/home/tablet/image-speaker-zx7.jpg",
+					desktop: "/assets/home/desktop/image-speaker-zx7.jpg",
+				}}
 				width={1110}
 				height={320}
 				imgClassName={""}

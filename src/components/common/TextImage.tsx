@@ -1,15 +1,17 @@
 import ResponsiveImage from "@/components/common/ResponsiveImage";
 import Image from "next/image";
 
-const TextImage = ({
-	children,
-	image,
-	imageDirection,
-}: {
+interface Data {
 	children: React.ReactNode;
-	image: Array<string>;
+	image: {
+		mobile: string;
+		tablet: string;
+		desktop: string;
+	};
 	imageDirection: string;
-}) => {
+}
+
+const TextImage = ({ children, image, imageDirection }: Data) => {
 	return (
 		<article
 			className={`container block__padding grid items-center gap-10 text-center md:grid-cols-2 lg:gap-36 md:text-start`}
@@ -22,7 +24,7 @@ const TextImage = ({
 				{children}
 			</div>
 			<ResponsiveImage
-				images={[...image]}
+				images={image}
 				width={540}
 				height={580}
 				altText=''

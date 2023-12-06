@@ -1,6 +1,5 @@
 import ProductDesc from "@/components/common/ProductDesc";
 import ResponsiveImage from "@/components/common/ResponsiveImage";
-import Image from "next/image";
 
 const HomeHero = () => {
 	return (
@@ -13,15 +12,17 @@ const HomeHero = () => {
 						made for the passionate music enthusiast.'
 						url='/category/headphones/product/XX99 Mark II'
 						location='home'
+						isNew
+						price={30}
 					/>
 				</div>
 
 				<ResponsiveImage
-					images={[
-						"/assets/home/desktop/image-hero.jpg",
-						"/assets/home/tablet/image-hero.jpg",
-						"/assets/home/mobile/image-hero.jpg",
-					]}
+					images={{
+						mobile: "/assets/home/mobile/image-hero.jpg",
+						tablet: "/assets/home/tablet/image-hero.jpg",
+						desktop: "/assets/home/desktop/image-hero.jpg",
+					}}
 					altText={""}
 					width={600}
 					height={600}

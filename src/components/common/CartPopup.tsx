@@ -1,6 +1,4 @@
 import ProductInfo from "@/components/common/ProductInfo";
-import QtySelector from "@/components/formElements/QtySelector";
-import Image from "next/image";
 import Link from "next/link";
 
 const CartPopup = ({

@@ -2,8 +2,34 @@ import BestAudioGear from "@/components/common/BestAudioGear";
 import MobileNavigationBar from "@/components/layout/MobileNavigationBar";
 import TextImage from "@/components/common/TextImage";
 import ProductDesc from "@/components/common/ProductDesc";
+import { notFound } from "next/navigation";
+import { getProductsOfCategory } from "@/lib/getProductsOfCategory";
 
-const Category = ({ params }: { params: { name: string } }) => {
+async function getData(name: string) {
+	const res = getProductsOfCategory(name);
+
+	if (res.length <= 0) {
+		notFound();
+	}
+	return res;
+}
+
+export async function generateMetadata({
+	params,
+}: {
+	params: { name: string };
+}) {
+	const post = await getData(params.name).then((res) => res);
+
+	return {
+		title: `${params.name} | Audiophile`,
+		description: "",
+	};
+}
+
+const Category = async ({ params }: { params: { name: string } }) => {
+	const data = await getData(params.name);
+
 	return (
 		<div className='category__page'>
 			<div className='hero bg-blackBg relative'>
@@ -13,57 +39,31 @@ const Category = ({ params }: { params: { name: string } }) => {
 					</h1>
 				</div>
 			</div>
-			<TextImage
-				image={[
-					"/assets/product-xx99-mark-one-headphones/desktop/image-product.jpg",
-					"/assets/product-xx99-mark-one-headphones/tablet/image-product.jpg",
-					"/assets/product-xx99-mark-one-headphones/mobile/image-product.jpg",
-				]}
-				imageDirection='left'
-			>
-				<ProductDesc
-					name='XX99 Mark II Headphones'
-					description='The new XX99 Mark II headphones is the pinnacle of pristine audio. It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound.'
-					url='/category/headphones/product/XX99 Mark II'
-					location='category'
-				/>
-			</TextImage>
-			<TextImage
-				image={[
-					"/assets/product-xx99-mark-one-headphones/desktop/image-product.jpg",
-					"/assets/product-xx99-mark-one-headphones/tablet/image-product.jpg",
-					"/assets/product-xx99-mark-one-headphones/mobile/image-product.jpg",
-				]}
-				imageDirection='right'
-			>
-				<ProductDesc
-					name='XX99 Mark II Headphones'
-					description='The new XX99 Mark II headphones is the pinnacle of pristine audio. It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound.'
-					url='/category/headphones/product/XX99 Mark II'
-					location='category'
-				/>
-			</TextImage>
-			<TextImage
-				image={[
-					"/assets/product-xx99-mark-one-headphones/desktop/image-product.jpg",
-					"/assets/product-xx99-mark-one-headphones/tablet/image-product.jpg",
-					"/assets/product-xx99-mark-one-headphones/mobile/image-product.jpg",
-				]}
-				imageDirection='left'
-			>
-				<ProductDesc
-					name='XX99 Mark II Headphones'
-					description='The new XX99 Mark II headphones is the pinnacle of pristine audio. It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound.'
-					url='/category/headphones/product/XX99 Mark II'
-					location='category'
-				/>
-			</TextImage>
+			{data.map((el, i) => {
+				return (
+					<TextImage
+						key={el.name}
+						image={el.image}
+						imageDirection={`${i % 2 === 0 ? "right" : "left"}`}
+					>
+						<ProductDesc
+							name={el.name}
+							description={el.description}
+							url={`/category/${params.name}/product/${el.slug}`}
+							location='category'
+							isNew={el.new}
+							price={el.price}
+						/>
+					</TextImage>
+				);
+			})}
+
 			<section>
 				<MobileNavigationBar />
 			</section>
-
 			<BestAudioGear />
 		</div>
 	);
 };
+
 export default Category;

@@ -3,6 +3,7 @@ import "../globals.css";
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 import Footer from "@/components/layout/Footer";
+import Script from "next/script";
 
 const manrope = Manrope({ subsets: ["latin"] });
 
@@ -19,15 +20,23 @@ export default function RootLayout({
 	return (
 		<html lang='en'>
 			<head>
-				{/* <script async src="https://www.googletagmanager.com/gtag/js?id=G-RQWY716SP9"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-RQWY716SP9');
-</script> */}
-				<link rel='manifest' href='/manifest.json' />
+				{process.env.NODE_ENV === "production" && (
+					<>
+						<Script
+							src='https://www.googletagmanager.com/gtag/js?id=G-RQWY716SP9'
+							async
+						/>
+						<script
+							dangerouslySetInnerHTML={{
+								__html: `window.dataLayer = window.dataLayer || [];
+							function gtag(){dataLayer.push(arguments);}
+							gtag('js', new Date());
+						  
+							gtag('config', 'G-RQWY716SP9');`,
+							}}
+						/>
+					</>
+				)}
 			</head>
 			<body className={manrope.className} data-cart-open='false'>
 				<Header dashboard={false} />
