@@ -1,9 +1,10 @@
 import Header from "@/components/layout/Header";
-import "../globals.css";
+import "./globals.css";
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 import Footer from "@/components/layout/Footer";
 import Script from "next/script";
+import ReduxProvider from "@/redux/Provider";
 
 const manrope = Manrope({ subsets: ["latin"] });
 
@@ -39,9 +40,11 @@ export default function RootLayout({
 				)}
 			</head>
 			<body className={manrope.className} data-cart-open='false'>
-				<Header dashboard={false} />
-				<main>{children}</main>
-				<Footer dashboard={false} />
+				<ReduxProvider>
+					<Header dashboard={false} />
+					<main>{children}</main>
+					<Footer dashboard={false} />
+				</ReduxProvider>
 			</body>
 		</html>
 	);

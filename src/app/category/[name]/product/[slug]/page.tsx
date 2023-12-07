@@ -44,7 +44,9 @@ const Product = async ({ params }: { params: { slug: string } }) => {
 				<ProductDesc
 					name={data[0].name}
 					description={data[0].description}
-					url={data[0].slug}
+					slug={data[0].slug}
+					url={`/category/${data[0].name}/product/${params.slug}`}
+					thumbnail={data[0].image.mobile}
 					location='product'
 					isNew={data[0].new}
 					price={data[0].price}

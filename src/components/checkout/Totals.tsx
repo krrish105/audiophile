@@ -1,13 +1,34 @@
 import PriceInfo from "@/components/common/PriceInfo";
 
-const Totals = () => {
+const Totals = ({
+	priceSummary,
+}: {
+	priceSummary: {
+		total: number;
+		shipping: number;
+		vat: number;
+		grandTotal: number;
+	};
+}) => {
 	return (
 		<div className='flex flex-col gap-2'>
-			<PriceInfo title='Total' price='5396' type='subPrice' />
-			<PriceInfo title='Shipping' price='50' type='subPrice' />
-			<PriceInfo title='VAT (INCLUDED)' price='1079' type='subPrice' />
+			<PriceInfo title='Total' price={priceSummary.total} type='subPrice' />
+			<PriceInfo
+				title='Shipping'
+				price={priceSummary.shipping}
+				type='subPrice'
+			/>
+			<PriceInfo
+				title='VAT (INCLUDED)'
+				price={priceSummary.vat}
+				type='subPrice'
+			/>
 			<div className='mt-4'>
-				<PriceInfo title='GRAND TOTAL' price='5,446' type='grandTotal' />
+				<PriceInfo
+					title='GRAND TOTAL'
+					price={priceSummary.grandTotal}
+					type='grandTotal'
+				/>
 			</div>
 		</div>
 	);

@@ -10,7 +10,9 @@ const HomeHero = () => {
 						name='XX99 Mark II Headphones'
 						description='Experience natural, lifelike audio and exceptional build quality
 						made for the passionate music enthusiast.'
+						slug='XX99 Mark II'
 						url='/category/headphones/product/XX99 Mark II'
+						thumbnail='/assets/product-xx59-headphones/mobile/image-product.jpg'
 						location='home'
 						isNew
 						price={30}

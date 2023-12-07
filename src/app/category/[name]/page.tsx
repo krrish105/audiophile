@@ -49,7 +49,9 @@ const Category = async ({ params }: { params: { name: string } }) => {
 						<ProductDesc
 							name={el.name}
 							description={el.description}
+							slug={el.slug}
 							url={`/category/${params.name}/product/${el.slug}`}
+							thumbnail={el.image.mobile}
 							location='category'
 							isNew={el.new}
 							price={el.price}

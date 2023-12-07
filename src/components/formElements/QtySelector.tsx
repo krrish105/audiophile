@@ -1,9 +1,12 @@
-"use client";
-import { useState } from "react";
-
-const QtySelector = ({ value, size }: { value: any; size: string }) => {
-	const [qty, setQty] = useState<number>(value);
-
+const QtySelector = ({
+	value,
+	size,
+	setQty,
+}: {
+	value: any;
+	size: string;
+	setQty: any;
+}) => {
 	return (
 		<div
 			className={`form__group qty__selector flex flex-row w-fit px-4 py-2 md:p-4 ${size}`}
@@ -22,7 +25,7 @@ const QtySelector = ({ value, size }: { value: any; size: string }) => {
 				name='quantity'
 				id='quantity'
 				min={1}
-				value={qty}
+				value={value}
 				className='text-center border-0 text-base font-bold leading-normal'
 				onChange={(e) => setQty(parseInt(e.target.value))}
 			/>

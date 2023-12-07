@@ -4,7 +4,7 @@ const PriceInfo = ({
 	type,
 }: {
 	title: string;
-	price: string;
+	price: number;
 	type: string | null | undefined;
 }) => {
 	return (

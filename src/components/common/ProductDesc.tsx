@@ -1,9 +1,11 @@
 import Link from "next/link";
-import QtySelector from "@/components/formElements/QtySelector";
+import AddToCart from "@/components/product/AddToCart";
 
 const ProductDesc = ({
 	name,
 	description,
+	slug,
+	thumbnail,
 	url,
 	location,
 	isNew,
@@ -11,7 +13,9 @@ const ProductDesc = ({
 }: {
 	name: string;
 	description: string;
+	slug: string;
 	url: string;
+	thumbnail: string;
 	location: string;
 	isNew: boolean;
 	price: number;
@@ -32,10 +36,15 @@ const ProductDesc = ({
 			{location === "product" ? (
 				<>
 					<strong className='block mt-8 text-lg'>${price}</strong>
-					<div className='flex gap-4 mt-12 flex-wrap'>
-						<QtySelector value={1} size='big' />
-						<button className='btn btn-orange'>Add to Cart</button>
-					</div>
+					<AddToCart
+						product={{
+							slug,
+							name,
+							price,
+							thumbnail,
+							quantity: 1,
+						}}
+					/>
 				</>
 			) : (
 				<Link href={url} className='btn btn-orange w-fit mt-10 mx-auto md:mx-0'>
