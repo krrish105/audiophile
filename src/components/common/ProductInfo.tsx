@@ -1,6 +1,8 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import QtySelector from "@/components/formElements/QtySelector";
+import { useState } from "react";
 
 const ProductInfo = ({
 	location,
@@ -9,6 +11,8 @@ const ProductInfo = ({
 	location: string;
 	type: string;
 }) => {
+	const [qty, setQty] = useState<number>(1);
+
 	return (
 		<div className='flex'>
 			{/* Product Info */}
@@ -33,7 +37,9 @@ const ProductInfo = ({
 				{location === "checkout" ? (
 					<strong className='block text-neutral-500'>1x</strong>
 				) : (
-					location !== "dashboard" && <QtySelector size='small' value={1} />
+					location !== "dashboard" && (
+						<QtySelector size='small' value={qty} setQty={setQty} />
+					)
 				)}
 			</div>
 		</div>
