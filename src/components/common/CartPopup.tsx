@@ -30,7 +30,14 @@ const CartPopup = ({
 				<div className='flex flex-col gap-6'>
 					{CartInititalState.cart.length > 0
 						? CartInititalState.cart.map((el, i) => {
-								return <ProductInfo key={i} location='cart' type='normal' />;
+								return (
+									<ProductInfo
+										key={i}
+										location='cart'
+										type='normal'
+										product={{ ...el }}
+									/>
+								);
 						  })
 						: "0 Products"}
 				</div>

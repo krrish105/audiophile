@@ -1,13 +1,10 @@
-import MobileNavigationBar from "@/components/layout/MobileNavigationBar";
-import BestAudioGear from "@/components/common/BestAudioGear";
-import ProductDesc from "@/components/common/ProductDesc";
+import { notFound } from "next/navigation";
+import { getProduct } from "@/lib/getProduct";
 import Description from "@/components/product/Description";
 import Main from "@/components/product/Main";
 import CategoryPageBanners from "@/components/product/CategoryPageBanners";
 import Recommendation from "@/components/product/Recommendation";
-import BackButton from "@/components/common/BackButton";
-import { getProduct } from "@/lib/getProduct";
-import { notFound } from "next/navigation";
+import ProductPageLayout from "@/components/common/ProductPageLayout";
 
 async function getData(slug: string) {
 	const res = getProduct(slug);
@@ -35,23 +32,16 @@ const Product = async ({ params }: { params: { slug: string } }) => {
 	const data = await getData(params.slug);
 
 	return (
-		<>
-			<div className='container mb-6 mt-4 sm:mt-8 md:mt-20 md:mb-14'>
-				<BackButton />
-			</div>
-
-			<Main image={data[0].image}>
-				<ProductDesc
-					name={data[0].name}
-					description={data[0].description}
-					slug={data[0].slug}
-					url={`/category/${data[0].name}/product/${params.slug}`}
-					thumbnail={data[0].image.mobile}
-					location='product'
-					isNew={data[0].new}
-					price={data[0].price}
-				/>
-			</Main>
+		<ProductPageLayout>
+			<Main
+				name={data[0].name}
+				description={data[0].description}
+				slug={data[0].slug}
+				url={`/category/${data[0].name}/product/${params.slug}`}
+				image={data[0].image}
+				isNew={data[0].new}
+				price={data[0].price}
+			/>
 			<Description features={data[0].features} inTheBox={data[0].includes} />
 			<CategoryPageBanners
 				gallery1={data[0].gallery.first}
@@ -62,12 +52,7 @@ const Product = async ({ params }: { params: { slug: string } }) => {
 				category={data[0].category}
 				recommendations={data[0].others}
 			/>
-
-			<section>
-				<MobileNavigationBar />
-			</section>
-			<BestAudioGear />
-		</>
+		</ProductPageLayout>
 	);
 };
 export default Product;

@@ -12,7 +12,14 @@ const OrderSummary = () => {
 			<h2 className='heading-6 mb-8'>Summary</h2>
 			<div className='flex flex-col gap-6 max-h-60 overflow-y-auto mb-8'>
 				{CartInititalState.cart.map((el, i) => {
-					return <ProductInfo key={i} location='checkout' type='normal' />;
+					return (
+						<ProductInfo
+							key={i}
+							location='checkout'
+							type='normal'
+							product={{ ...el }}
+						/>
+					);
 				})}
 			</div>
 			<Totals priceSummary={CartInititalState.priceSummary} />

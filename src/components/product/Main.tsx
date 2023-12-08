@@ -1,21 +1,40 @@
 import ResponsiveImage from "@/components/common/ResponsiveImage";
+import ProductDesc from "@/components/common/ProductDesc";
+import { ProductImageType } from "@/redux/CartProductProp";
 
 const Main = ({
-	children,
+	name,
+	description,
+	slug,
+	url,
 	image,
+	isNew,
+	price,
 }: {
-	children: React.ReactNode;
-	image: {
-		mobile: string;
-		tablet: string;
-		desktop: string;
-	};
+	name: string;
+	description: string;
+	slug: string;
+	url: string;
+	image: ProductImageType;
+	isNew: boolean;
+	price: number;
 }) => {
 	return (
 		<section
 			className={`container block__padding grid items-center gap-10 text-center md:grid-cols-2 lg:gap-36 md:text-start`}
 		>
-			<div className={`order-1`}>{children}</div>
+			<div className={`order-1`}>
+				<ProductDesc
+					name={name}
+					description={description}
+					slug={slug}
+					url={url}
+					thumbnail={image.mobile}
+					location='product'
+					isNew={isNew}
+					price={price}
+				/>
+			</div>
 			<ResponsiveImage
 				images={image}
 				altText={""}

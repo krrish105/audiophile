@@ -3,7 +3,7 @@ import QtySelector from "@/components/formElements/QtySelector";
 import { AppDispatch } from "@/redux/store";
 import { useDispatch } from "react-redux";
 import { addToCart } from "@/redux/features/cart-slice";
-import ProductType from "@/redux/CartProductProp";
+import { ProductType } from "@/redux/CartProductProp";
 import { useState } from "react";
 
 const AddToCart = ({ product }: { product: ProductType }) => {

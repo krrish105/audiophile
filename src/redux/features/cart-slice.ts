@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import ProductType from "@/redux/CartProductProp";
+import { ProductType } from "@/redux/CartProductProp";
 
 type ProductState = {
 	cart: ProductType[];
@@ -27,14 +27,44 @@ export const cart = createSlice({
 	reducers: {
 		addToCart: (state, action) => {
 			if (action.payload.quantity > 0) {
-				state.cart = [...state.cart, action.payload];
+				let IsProductPresent = state.cart.filter(
+					(el, i) => el.slug === action.payload.slug
+				);
+				if (IsProductPresent.length > 0) {
+					let cartCopy = [...state.cart];
+					state.cart = cartCopy.map((el) => {
+						el.quantity = el.quantity + action.payload.quantity;
+						return el;
+					});
+				} else {
+					state.cart = [...state.cart, action.payload];
+				}
 			}
 			let total = 0;
-			state.cart.forEach((product) => (total += product.price));
+			state.cart.forEach(
+				(product) => (total += product.price * product.quantity)
+			);
+			state.priceSummary.total = total;
+		},
+		updateCart: (state, action) => {
+			let cartCopy = [...state.cart];
+			if (action.payload.quantity === 0) {
+				state.cart = cartCopy.filter((el) => el.slug !== action.payload.slug);
+			} else {
+				let cartCopy = [...state.cart];
+				state.cart = cartCopy.map((el) => {
+					el.quantity = action.payload.quantity;
+					return el;
+				});
+			}
+			let total = 0;
+			state.cart.forEach(
+				(product) => (total += product.price * product.quantity)
+			);
 			state.priceSummary.total = total;
 		},
 	},
 });
 
-export const { addToCart } = cart.actions;
+export const { addToCart, updateCart } = cart.actions;
 export default cart.reducer;

@@ -1,7 +1,16 @@
 import ResponsiveImage from "@/components/common/ResponsiveImage";
 import Link from "next/link";
+import { ProductImageType } from "@/redux/CartProductProp";
 
-const Card = ({ image, name, link }: any) => {
+const Card = ({
+	image,
+	name,
+	link,
+}: {
+	image: ProductImageType;
+	name: string;
+	link: string;
+}) => {
 	return (
 		<div className='text-center'>
 			<ResponsiveImage

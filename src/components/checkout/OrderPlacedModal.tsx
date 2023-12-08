@@ -1,11 +1,16 @@
 "use client";
-import ProductInfo from "@/components/common/ProductInfo";
+import { useState } from "react";
+import { useSelector } from "react-redux";
+import { RootState } from "@/redux/store";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import ProductInfo from "@/components/common/ProductInfo";
 
 const OrderPlacedModal = ({ setOrderPlaced }: any) => {
-	const [showAllProducts, setShowAllProducts] = useState(false);
+	const CartInititalState = useSelector((state: RootState) => state.cartSlice);
+	const [showAllProducts, setShowAllProducts] = useState(
+		CartInititalState.cart.length > 1
+	);
 
 	return (
 		<>
@@ -26,12 +31,23 @@ const OrderPlacedModal = ({ setOrderPlaced }: any) => {
 					<div className='grid mt-8 grid-rows-[auto_6rem] lg:grid-cols-[auto_12rem] lg:grid-rows-1'>
 						<div className='bg-[#F1F1F1] p-6 rounded-t-lg lg:rounded-l-lg lg:rounded-t-none'>
 							<div className='max-h-44 overflow-y-auto flex flex-col gap-4'>
-								<ProductInfo type='small' location='checkout' />
+								<ProductInfo
+									location='checkout'
+									type='small'
+									product={{ ...CartInititalState.cart[0] }}
+								/>
 								{showAllProducts &&
-									Array.from({ length: 9 }).map((el, i) => {
-										return (
-											<ProductInfo key={i} location='checkout' type='small' />
-										);
+									CartInititalState.cart.map((el, i) => {
+										if (i > 1) {
+											return (
+												<ProductInfo
+													key={el.name}
+													location='checkout'
+													type='small'
+													product={{ ...el }}
+												/>
+											);
+										}
 									})}
 							</div>
 							<hr className='block my-3' />
@@ -51,7 +67,9 @@ const OrderPlacedModal = ({ setOrderPlaced }: any) => {
 						>
 							<div className='flex flex-col gap-2'>
 								<span className='text-neutral-500'>Grand Total</span>
-								<span className='text-white'>$ 5,446</span>
+								<span className='text-white'>
+									$ {CartInititalState.priceSummary.grandTotal}
+								</span>
 							</div>
 						</div>
 					</div>
