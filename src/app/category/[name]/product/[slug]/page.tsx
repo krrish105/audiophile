@@ -23,7 +23,7 @@ export async function generateMetadata({
 	const post = await getData(params.slug).then((res) => res);
 
 	return {
-		title: `${params.slug} | Audiophile`,
+		title: `${post[0].name} | Audiophile`,
 		description: "",
 	};
 }

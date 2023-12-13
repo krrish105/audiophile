@@ -8,9 +8,7 @@ import ProductInfo from "@/components/common/ProductInfo";
 
 const OrderPlacedModal = ({ setOrderPlaced }: any) => {
 	const CartInititalState = useSelector((state: RootState) => state.cartSlice);
-	const [showAllProducts, setShowAllProducts] = useState(
-		CartInititalState.cart.length > 1
-	);
+	const [showAllProducts, setShowAllProducts] = useState(false);
 
 	return (
 		<>
@@ -50,15 +48,19 @@ const OrderPlacedModal = ({ setOrderPlaced }: any) => {
 										}
 									})}
 							</div>
-							<hr className='block my-3' />
-							<button
-								className='block mx-auto'
-								onClick={() => setShowAllProducts((prev) => !prev)}
-							>
-								<strong className='text-neutral-500 text-xs'>
-									{showAllProducts ? "View less" : "and 2 other item(s)"}
-								</strong>
-							</button>
+							{CartInititalState.cart.length > 1 && (
+								<>
+									<hr className='block my-3' />
+									<button
+										className='block mx-auto'
+										onClick={() => setShowAllProducts((prev) => !prev)}
+									>
+										<strong className='text-neutral-500 text-xs'>
+											{showAllProducts ? "View less" : "and 2 other item(s)"}
+										</strong>
+									</button>
+								</>
+							)}
 						</div>
 						<div
 							className={`bg-black flex justify-center p-6 rounded-b-lg lg:rounded-r-lg lg:rounded-b-none ${

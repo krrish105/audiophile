@@ -25,6 +25,7 @@ const QtySelector = ({
 				name='quantity'
 				id='quantity'
 				min={1}
+				max={100}
 				value={value}
 				className='text-center border-0 text-base font-bold leading-normal'
 				onChange={(e) => setQty(parseInt(e.target.value))}

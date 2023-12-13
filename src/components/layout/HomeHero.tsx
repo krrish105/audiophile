@@ -1,5 +1,6 @@
 import ProductDesc from "@/components/common/ProductDesc";
 import ResponsiveImage from "@/components/common/ResponsiveImage";
+import productData from "../../../public/data.json";
 
 const HomeHero = () => {
 	return (
@@ -7,14 +8,14 @@ const HomeHero = () => {
 			<div className='container'>
 				<div className='relative z-10'>
 					<ProductDesc
-						name='XX99 Mark II Headphones'
+						name={productData[3].name}
 						description='Experience natural, lifelike audio and exceptional build quality
 						made for the passionate music enthusiast.'
-						slug='XX99 Mark II'
-						url='/category/headphones/product/XX99 Mark II'
-						thumbnail='/assets/product-xx59-headphones/mobile/image-product.jpg'
+						slug={productData[3].slug}
+						url={`/category/${productData[3].category}/product/${productData[3].slug}`}
+						thumbnail={productData[3].image.mobile}
 						location='home'
-						isNew
+						isNew={productData[3].new}
 						price={30}
 					/>
 				</div>

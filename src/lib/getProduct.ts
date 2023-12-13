@@ -1,4 +1,4 @@
-import products from "../../data.json";
+import products from "../../public/data.json";
 
 export const getProduct = (slug: string) => {
 	return products.filter((el, i) => {

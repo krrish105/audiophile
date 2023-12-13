@@ -63,8 +63,15 @@ export const cart = createSlice({
 			);
 			state.priceSummary.total = total;
 		},
+		removeAllFromCart: (state, action) => {
+			state.cart = [];
+			state.priceSummary.total = 0;
+			state.priceSummary.shipping = 0;
+			state.priceSummary.vat = 0;
+			state.priceSummary.grandTotal = 0;
+		},
 	},
 });
 
-export const { addToCart, updateCart } = cart.actions;
+export const { addToCart, updateCart, removeAllFromCart } = cart.actions;
 export default cart.reducer;
