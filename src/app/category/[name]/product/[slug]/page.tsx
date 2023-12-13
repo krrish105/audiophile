@@ -41,6 +41,7 @@ const Product = async ({ params }: { params: { slug: string } }) => {
 				image={data[0].image}
 				isNew={data[0].new}
 				price={data[0].price}
+				category={data[0].category}
 			/>
 			<Description features={data[0].features} inTheBox={data[0].includes} />
 			<CategoryPageBanners

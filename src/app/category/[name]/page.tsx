@@ -55,6 +55,7 @@ const Category = async ({ params }: { params: { name: string } }) => {
 							location='category'
 							isNew={el.new}
 							price={el.price}
+							category={el.category}
 						/>
 					</TextImage>
 				);

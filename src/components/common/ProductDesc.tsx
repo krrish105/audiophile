@@ -6,6 +6,7 @@ const ProductDesc = ({
 	description,
 	slug,
 	thumbnail,
+	category,
 	url,
 	location,
 	isNew,
@@ -16,6 +17,7 @@ const ProductDesc = ({
 	slug: string;
 	url: string;
 	thumbnail: string;
+	category: string;
 	location: string;
 	isNew: boolean;
 	price: number;
@@ -43,6 +45,7 @@ const ProductDesc = ({
 							price,
 							thumbnail,
 							quantity: 1,
+							category,
 						}}
 					/>
 				</>

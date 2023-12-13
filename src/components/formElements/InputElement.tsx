@@ -6,7 +6,17 @@ const InputElement = ({
 	label,
 	value,
 	placeholder,
-}: any) => {
+	onChangeHandler,
+}: {
+	type: string;
+	name: string;
+	id: string;
+	required: boolean;
+	label: string;
+	value: string;
+	placeholder: string;
+	onChangeHandler: any;
+}) => {
 	return (
 		<div className='form__group'>
 			<label htmlFor={id}>{label}</label>
@@ -17,6 +27,7 @@ const InputElement = ({
 				aria-required={required}
 				defaultValue={value}
 				placeholder={placeholder}
+				onChange={onChangeHandler}
 			/>
 		</div>
 	);

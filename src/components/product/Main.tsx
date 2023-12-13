@@ -10,6 +10,7 @@ const Main = ({
 	image,
 	isNew,
 	price,
+	category,
 }: {
 	name: string;
 	description: string;
@@ -18,6 +19,7 @@ const Main = ({
 	image: ProductImageType;
 	isNew: boolean;
 	price: number;
+	category: string;
 }) => {
 	return (
 		<section
@@ -33,6 +35,7 @@ const Main = ({
 					location='product'
 					isNew={isNew}
 					price={price}
+					category={category}
 				/>
 			</div>
 			<ResponsiveImage

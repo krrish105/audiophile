@@ -1,7 +1,17 @@
 import InputElement from "@/components/formElements/InputElement";
 import STRINGS from "@/utils/string";
 
-const Billing = () => {
+const Billing = ({
+	billName,
+	billEmail,
+	billPhone,
+	formChangeHandler,
+}: {
+	billName: string;
+	billEmail: string;
+	billPhone: string;
+	formChangeHandler: any;
+}) => {
 	return (
 		<fieldset>
 			<legend className='subtitle mb-4'>
@@ -10,30 +20,33 @@ const Billing = () => {
 			<div className='grid gap-4 md:grid-cols-2'>
 				<InputElement
 					type='text'
-					name='name'
-					id='name'
+					name='billName'
+					id='billName'
 					required
 					label={STRINGS.checkout.billing.name}
-					value=''
+					value={billName}
 					placeholder={STRINGS.checkout.billing.namePlaceholder}
+					onChangeHandler={formChangeHandler}
 				/>
 				<InputElement
 					type='email'
-					name='email'
-					id='email'
+					name='billEmail'
+					id='billEmail'
 					required
 					label={STRINGS.checkout.billing.email}
-					value=''
+					value={billEmail}
 					placeholder={STRINGS.checkout.billing.emailPlaceholder}
+					onChangeHandler={formChangeHandler}
 				/>
 				<InputElement
 					type='tel'
-					name='tel'
-					id='tel'
+					name='billPhone'
+					id='billPhone'
 					required
 					label={STRINGS.checkout.billing.phone}
-					value=''
+					value={billPhone}
 					placeholder={STRINGS.checkout.billing.phonePlaceholder}
+					onChangeHandler={formChangeHandler}
 				/>
 			</div>
 		</fieldset>

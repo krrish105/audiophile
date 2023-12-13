@@ -43,7 +43,7 @@ const ProductInfo = ({
 				} ${location === "checkout" ? "flex-row" : "flex-col sm:flex-row"}`}
 			>
 				<div className='flex flex-col'>
-					<Link href='/'>
+					<Link href={`/category/${product.category}/product/${product.slug}`}>
 						<strong>{product.name}</strong>
 					</Link>
 					<span className='text-neutral-500 text-sm'>${product.price}</span>

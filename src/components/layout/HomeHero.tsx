@@ -17,6 +17,7 @@ const HomeHero = () => {
 						location='home'
 						isNew={productData[3].new}
 						price={30}
+						category={productData[3].category}
 					/>
 				</div>
 

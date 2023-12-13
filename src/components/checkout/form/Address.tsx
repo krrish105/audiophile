@@ -1,7 +1,19 @@
 import InputElement from "@/components/formElements/InputElement";
 import STRINGS from "@/utils/string";
 
-const Address = () => {
+const Address = ({
+	shippingAddress,
+	shippingZIP,
+	shippingCity,
+	shippingCountry,
+	formChangeHandler,
+}: {
+	shippingAddress: string;
+	shippingZIP: string;
+	shippingCity: string;
+	shippingCountry: string;
+	formChangeHandler: any;
+}) => {
 	return (
 		<fieldset className='mt-12'>
 			<legend className='subtitle mb-4'>
@@ -11,40 +23,44 @@ const Address = () => {
 				<div className='md:col-span-2'>
 					<InputElement
 						type='text'
-						name='address'
-						id='address'
+						name='shippingAddress'
+						id='shippingAddress'
 						required
 						label={STRINGS.checkout.address.address}
-						value=''
+						value={shippingAddress}
 						placeholder={STRINGS.checkout.address.addressPlaceholder}
+						onChangeHandler={formChangeHandler}
 					/>
 				</div>
 				<InputElement
 					type='text'
-					name='zip'
-					id='zip'
+					name='shippingZIP'
+					id='shippingZIP'
 					required
 					label={STRINGS.checkout.address.zip}
-					value=''
+					value={shippingZIP}
 					placeholder={STRINGS.checkout.address.zipPlaceholder}
+					onChangeHandler={formChangeHandler}
 				/>
 				<InputElement
 					type='text'
-					name='city'
-					id='city'
+					name='shippingCity'
+					id='shippingCity'
 					required
 					label={STRINGS.checkout.address.city}
-					value=''
+					value={shippingCity}
 					placeholder={STRINGS.checkout.address.cityPlaceholder}
+					onChangeHandler={formChangeHandler}
 				/>
 				<InputElement
 					type='text'
-					name='country'
-					id='country'
+					name='shippingCountry'
+					id='shippingCountry'
 					required
 					label={STRINGS.checkout.address.country}
-					value=''
+					value={shippingCountry}
 					placeholder={STRINGS.checkout.address.countryPlaceholder}
+					onChangeHandler={formChangeHandler}
 				/>
 			</div>
 		</fieldset>

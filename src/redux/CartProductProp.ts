@@ -10,4 +10,5 @@ export type ProductType = {
 	price: number;
 	thumbnail: string;
 	quantity: number;
+	category: string;
 };
