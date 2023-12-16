@@ -72,7 +72,7 @@ const OrderPlacedModal = ({ setOrderPlaced }: any) => {
 							<div className='flex flex-col gap-2'>
 								<span className='text-neutral-500'>Grand Total</span>
 								<span className='text-white'>
-									$ {CartInititalState.priceSummary.grandTotal}
+									$ {CartInititalState.priceSummary.grandTotal.toFixed(2)}
 								</span>
 							</div>
 						</div>

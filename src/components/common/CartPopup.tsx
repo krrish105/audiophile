@@ -54,7 +54,7 @@ const CartPopup = ({
 					<div className='flex justify-between'>
 						<span className='uppercase text-neutral-500'>Total</span>
 						<strong className='text-lg'>
-							$ {CartInititalState.priceSummary.total}
+							$ {CartInititalState.priceSummary.total.toFixed(2)}
 						</strong>
 					</div>
 					{CartInititalState.cart.length > 0 && (

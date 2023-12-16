@@ -12,21 +12,25 @@ const Totals = ({
 }) => {
 	return (
 		<div className='flex flex-col gap-2'>
-			<PriceInfo title='Total' price={priceSummary.total} type='subPrice' />
+			<PriceInfo
+				title='Total'
+				price={priceSummary.total.toFixed(2)}
+				type='subPrice'
+			/>
 			<PriceInfo
 				title='Shipping'
-				price={priceSummary.shipping}
+				price={priceSummary.shipping.toFixed(2)}
 				type='subPrice'
 			/>
 			<PriceInfo
 				title='VAT (INCLUDED)'
-				price={priceSummary.vat}
+				price={priceSummary.vat.toFixed(2)}
 				type='subPrice'
 			/>
 			<div className='mt-4'>
 				<PriceInfo
 					title='GRAND TOTAL'
-					price={priceSummary.grandTotal}
+					price={priceSummary.grandTotal.toFixed(2)}
 					type='grandTotal'
 				/>
 			</div>
