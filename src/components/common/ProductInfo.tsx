@@ -1,12 +1,12 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import QtySelector from "@/components/formElements/QtySelector";
 import { useEffect, useState } from "react";
 import { ProductType } from "@/redux/CartProductProp";
 import { AppDispatch } from "@/redux/store";
 import { useDispatch } from "react-redux";
 import { updateCart } from "@/redux/features/cart-slice";
+import QtySelector from "@/components/formElements/QtySelector";
 
 const ProductInfo = ({
 	location,

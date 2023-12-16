@@ -17,7 +17,17 @@ module.exports = {
 				// => @media (min-width: 480px) { ... }
 			},
 			colors: {
-				blackBg: "#191919",
+				blackBg: "#121212",
+
+				primaryOrange: "#D87D4A",
+				primaryBlack: "#101010",
+				primaryGrey: "#F1F1F1",
+				primaryWhite: "#FAFAFA",
+				primaryError: "#CD2C2C",
+
+				secondaryOrange: "#FBAF85",
+				secondaryWhite: "#fff",
+				secondaryBlack: "#000",
 			},
 		},
 		container: {

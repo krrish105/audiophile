@@ -2,8 +2,8 @@
 import CartPopup from "@/components/common/CartPopup";
 import Image from "next/image";
 import { useState } from "react";
-import { RootState, AppDispatch } from "@/redux/store";
-import { useSelector, useDispatch } from "react-redux";
+import { RootState } from "@/redux/store";
+import { useSelector } from "react-redux";
 
 const Cart = () => {
 	const CartInititalState = useSelector((state: RootState) => state.cartSlice);

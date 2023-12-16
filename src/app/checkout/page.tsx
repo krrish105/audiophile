@@ -12,7 +12,7 @@ const Checkout = () => {
 		redirect("/");
 	} else {
 		return (
-			<div className='checkout bg-[#F1F1F1] pb-36'>
+			<div className='checkout bg-primaryGrey pb-36'>
 				<div className='container pb-6 pt-4 sm:pt-8 md:pt-20 md:pb-14'>
 					<BackButton />
 				</div>

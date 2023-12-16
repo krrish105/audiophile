@@ -13,7 +13,6 @@
 }
 
 body {
-	color: #000;
 	font-size: 0.9375rem;
 	font-style: normal;
 	font-weight: 500;
@@ -22,6 +21,7 @@ body {
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
+	@apply text-secondaryBlack;
 }
 footer {
 	margin-top: auto;
@@ -54,7 +54,7 @@ a:hover:not(.btn),
 a:focus:not(.btn),
 a:target:not(.btn),
 a:active:not(.btn) {
-	color: #d87d4a;
+	@apply text-primaryOrange;
 }
 /* Header */
 header {
@@ -115,13 +115,9 @@ footer > div::before {
 	left: 0;
 	width: 6.3125rem;
 	height: 0.25rem;
-	background: #d87d4a;
-	@apply left-1/2 -translate-x-1/2 sm:left-0 sm:-translate-x-0;
+	@apply bg-primaryOrange left-1/2 -translate-x-1/2 sm:left-0 sm:-translate-x-0;
 }
 
-.hero .product__desc {
-	@apply py-32;
-}
 .hero .product__desc,
 .hero .product__desc h2 {
 	color: white;
@@ -131,7 +127,7 @@ footer > div::before {
 }
 
 .product__list li span {
-	color: #d87d4a;
+	@apply text-primaryOrange;
 	font-weight: 700;
 	padding-right: 1.5rem;
 }

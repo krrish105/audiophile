@@ -31,7 +31,7 @@ const CartPopup = ({
 					</strong>
 					<button
 						className='underline text-sm btn-transparent'
-						onClick={() => dispatch(removeAllFromCart([]))}
+						onClick={() => dispatch(removeAllFromCart({ orderPlaced: false }))}
 					>
 						Remove all
 					</button>

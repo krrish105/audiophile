@@ -12,8 +12,8 @@ const BestAudioGear = () => {
 		>
 			<div className='py-4'>
 				<h2 className='mb-8 heading-2'>
-					Bringing you the <span className='text-[#D87D4A]'>best</span> audio
-					gear
+					Bringing you the <span className='text-primaryOrange'>best</span>{" "}
+					audio gear
 				</h2>
 				<p className='text-neutral-500'>
 					Located at the heart of New York City, Audiophile is the premier store

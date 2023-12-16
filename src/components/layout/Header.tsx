@@ -4,7 +4,7 @@ import Navigation from "@/components/layout/Navigation";
 
 const Header = ({ dashboard }: { dashboard: boolean }) => {
 	return (
-		<header className={`bg-blackBg ${dashboard && "dashboard"}`}>
+		<header className='bg-blackBg'>
 			<div className='container relative'>
 				<div>
 					<LogoLink />

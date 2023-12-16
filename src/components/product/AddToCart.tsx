@@ -1,10 +1,10 @@
 "use client";
-import QtySelector from "@/components/formElements/QtySelector";
+import { useState } from "react";
 import { AppDispatch } from "@/redux/store";
 import { useDispatch } from "react-redux";
+import QtySelector from "@/components/formElements/QtySelector";
 import { addToCart } from "@/redux/features/cart-slice";
 import { ProductType } from "@/redux/CartProductProp";
-import { useState } from "react";
 
 const AddToCart = ({ product }: { product: ProductType }) => {
 	const [qty, setQty] = useState<number>(product.quantity);

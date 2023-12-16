@@ -1,8 +1,8 @@
 "use client";
-import LaptopNavigationBar from "@/components/layout/LaptopNavigationBar";
-import MobileNavigationBar from "@/components/layout/MobileNavigationBar";
 import Image from "next/image";
 import { useState } from "react";
+import LaptopNavigationBar from "@/components/layout/LaptopNavigationBar";
+import MobileNavigationBar from "@/components/layout/MobileNavigationBar";
 
 const Navigation = () => {
 	const [mobileNavVisible, isMobileNavVisible] = useState(false);

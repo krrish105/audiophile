@@ -5,8 +5,18 @@ const RadioButton = ({
 	label,
 	checked = false,
 	value,
-	changeHandler,
-}: any) => {
+	onChangeHandler,
+	onBlurHandler,
+}: {
+	name: string;
+	id: string;
+	required: boolean;
+	label: string;
+	value: string;
+	checked: boolean;
+	onChangeHandler: any;
+	onBlurHandler: any;
+}) => {
 	return (
 		<label className='form__group radio__btn' htmlFor={id}>
 			<span>{label}</span>
@@ -16,8 +26,9 @@ const RadioButton = ({
 				id={id}
 				defaultChecked={checked}
 				defaultValue={value}
-				onChange={(e) => changeHandler(e)}
-				// aria-required={required}
+				onChange={onChangeHandler}
+				onBlur={onBlurHandler}
+				// required={required}
 			/>
 		</label>
 	);

@@ -1,13 +1,15 @@
 "use client";
 import { useState } from "react";
-import { useSelector } from "react-redux";
-import { RootState } from "@/redux/store";
+import { useSelector, useDispatch } from "react-redux";
+import { RootState, AppDispatch } from "@/redux/store";
 import Image from "next/image";
 import Link from "next/link";
 import ProductInfo from "@/components/common/ProductInfo";
+import { removeAllFromCart } from "@/redux/features/cart-slice";
 
 const OrderPlacedModal = ({ setOrderPlaced }: any) => {
 	const CartInititalState = useSelector((state: RootState) => state.cartSlice);
+	const dispatch = useDispatch<AppDispatch>();
 	const [showAllProducts, setShowAllProducts] = useState(false);
 
 	return (
@@ -27,7 +29,7 @@ const OrderPlacedModal = ({ setOrderPlaced }: any) => {
 						You will receive an email confirmation shortly.
 					</span>
 					<div className='grid mt-8 grid-rows-[auto_6rem] lg:grid-cols-[auto_12rem] lg:grid-rows-1'>
-						<div className='bg-[#F1F1F1] p-6 rounded-t-lg lg:rounded-l-lg lg:rounded-t-none'>
+						<div className='bg-primaryGrey p-6 rounded-t-lg lg:rounded-l-lg lg:rounded-t-none'>
 							<div className='max-h-44 overflow-y-auto flex flex-col gap-4'>
 								<ProductInfo
 									location='checkout'
@@ -78,6 +80,7 @@ const OrderPlacedModal = ({ setOrderPlaced }: any) => {
 					<Link
 						href='/'
 						className='btn btn-orange block w-full text-center mt-12'
+						onClick={() => dispatch(removeAllFromCart({ orderPlaced: true }))}
 					>
 						Back to home
 					</Link>

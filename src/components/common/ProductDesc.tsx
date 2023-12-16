@@ -28,7 +28,7 @@ const ProductDesc = ({
 				location === "product" ? "text-start" : "text-center md:text-start"
 			}`}
 		>
-			{isNew && <span className='text-[#D87D4A]'>NEW PRODUCT</span>}
+			{isNew && <span className='text-primaryOrange'>NEW PRODUCT</span>}
 			{location === "product" ? (
 				<h1 className='mt-6 heading-1'>{name}</h1>
 			) : (

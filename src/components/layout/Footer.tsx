@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Footer = ({ dashboard }: { dashboard: boolean }) => {
 	return (
-		<footer className='bg-blackBg'>
+		<footer className='bg-primaryBlack'>
 			<div className='container relative'>
 				<div className='flex justify-between flex-col items-center gap-8 sm:items-start md:flex-row'>
 					<LogoLink />

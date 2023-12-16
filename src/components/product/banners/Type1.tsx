@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Type1 = () => {
 	return (
-		<div className='rounded-lg bg-[#D87D4A] py-14 px-6 overflow-hidden mb-12 md:p-24 md:pb-0'>
+		<div className='rounded-lg bg-primaryOrange py-14 px-6 overflow-hidden mb-12 md:p-24 md:pb-0'>
 			<div className='flex items-center gap-32 flex-col md:flex-row'>
 				<ResponsiveImage
 					images={{

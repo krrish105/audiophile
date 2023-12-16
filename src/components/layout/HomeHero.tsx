@@ -4,9 +4,9 @@ import productData from "../../../public/data.json";
 
 const HomeHero = () => {
 	return (
-		<div className='hero bg-blackBg relative z-10'>
-			<div className='container'>
-				<div className='relative z-10'>
+		<div className='hero bg-blackBg relative z-10  md:h-auto'>
+			<div className='container flex justify-between py-8 flex-col md:flex-row items-center'>
+				<div className='z-10 absolute md:static inset-0 top-[45%] sm:top-1/2 -translate-y-1/2 md:translate-y-0'>
 					<ProductDesc
 						name={productData[3].name}
 						description='Experience natural, lifelike audio and exceptional build quality
@@ -23,17 +23,15 @@ const HomeHero = () => {
 
 				<ResponsiveImage
 					images={{
-						mobile: "/assets/home/mobile/image-hero.jpg",
-						tablet: "/assets/home/tablet/image-hero.jpg",
-						desktop: "/assets/home/desktop/image-hero.jpg",
+						mobile: "/assets/home/mobile/Bitmap.png",
+						tablet: "/assets/home/tablet/Bitmap.png",
+						desktop: "/assets/home/desktop/Bitmap.png",
 					}}
 					altText={""}
-					width={600}
-					height={600}
-					pictureClassName={
-						"rounded-lg md:order-2 absolute inset-0 -top-28 -z-10 max-w-[1440px] mx-auto"
-					}
-					imgClassName={"w-full rounded-lg h-full"}
+					width={500}
+					height={500}
+					pictureClassName={"rounded-lg md:order-2"}
+					imgClassName={""}
 				/>
 			</div>
 		</div>

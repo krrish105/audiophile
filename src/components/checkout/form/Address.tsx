@@ -1,18 +1,21 @@
 import InputElement from "@/components/formElements/InputElement";
 import STRINGS from "@/utils/string";
+import { FormFieldState } from "@/redux/CartProductProp";
 
 const Address = ({
-	shippingAddress,
-	shippingZIP,
-	shippingCity,
-	shippingCountry,
+	address,
+	zip,
+	city,
+	country,
 	formChangeHandler,
+	formBlurHandler,
 }: {
-	shippingAddress: string;
-	shippingZIP: string;
-	shippingCity: string;
-	shippingCountry: string;
+	address: FormFieldState;
+	zip: FormFieldState;
+	city: FormFieldState;
+	country: FormFieldState;
 	formChangeHandler: any;
+	formBlurHandler: any;
 }) => {
 	return (
 		<fieldset className='mt-12'>
@@ -27,9 +30,12 @@ const Address = ({
 						id='shippingAddress'
 						required
 						label={STRINGS.checkout.address.address}
-						value={shippingAddress}
+						value={address.value}
 						placeholder={STRINGS.checkout.address.addressPlaceholder}
 						onChangeHandler={formChangeHandler}
+						onBlurHandler={formBlurHandler}
+						isTouched={address.touched}
+						error={address.error}
 					/>
 				</div>
 				<InputElement
@@ -38,9 +44,12 @@ const Address = ({
 					id='shippingZIP'
 					required
 					label={STRINGS.checkout.address.zip}
-					value={shippingZIP}
+					value={zip.value}
 					placeholder={STRINGS.checkout.address.zipPlaceholder}
 					onChangeHandler={formChangeHandler}
+					onBlurHandler={formBlurHandler}
+					isTouched={zip.touched}
+					error={zip.error}
 				/>
 				<InputElement
 					type='text'
@@ -48,9 +57,12 @@ const Address = ({
 					id='shippingCity'
 					required
 					label={STRINGS.checkout.address.city}
-					value={shippingCity}
+					value={city.value}
 					placeholder={STRINGS.checkout.address.cityPlaceholder}
 					onChangeHandler={formChangeHandler}
+					onBlurHandler={formBlurHandler}
+					isTouched={city.touched}
+					error={city.error}
 				/>
 				<InputElement
 					type='text'
@@ -58,9 +70,12 @@ const Address = ({
 					id='shippingCountry'
 					required
 					label={STRINGS.checkout.address.country}
-					value={shippingCountry}
+					value={country.value}
 					placeholder={STRINGS.checkout.address.countryPlaceholder}
 					onChangeHandler={formChangeHandler}
+					onBlurHandler={formBlurHandler}
+					isTouched={country.touched}
+					error={country.error}
 				/>
 			</div>
 		</fieldset>

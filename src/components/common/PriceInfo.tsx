@@ -11,7 +11,9 @@ const PriceInfo = ({
 		<div className='flex justify-between'>
 			<span className='uppercase text-neutral-500 font-medium'>{title}</span>
 			<strong
-				className={`text-lg ${type === "grandTotal" ? "text-[#D87D4A]" : ""}`}
+				className={`text-lg ${
+					type === "grandTotal" ? "text-primaryOrange" : ""
+				}`}
 			>
 				$ {price}
 			</strong>

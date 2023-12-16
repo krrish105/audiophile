@@ -12,3 +12,9 @@ export type ProductType = {
 	quantity: number;
 	category: string;
 };
+
+export type FormFieldState = {
+	value: string;
+	touched: boolean | undefined;
+	error: string | undefined;
+};
