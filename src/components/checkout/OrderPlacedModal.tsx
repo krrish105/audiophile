@@ -38,7 +38,7 @@ const OrderPlacedModal = ({ setOrderPlaced }: any) => {
 								/>
 								{showAllProducts &&
 									CartInititalState.cart.map((el, i) => {
-										if (i > 1) {
+										if (i >= 1) {
 											return (
 												<ProductInfo
 													key={el.name}
