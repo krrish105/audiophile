@@ -7,11 +7,6 @@ const Type3 = () => {
 			<div className='z-10'>
 				<div>
 					<h1 className='heading-4 mb-8 text-black'>ZX9 SPEAKER</h1>
-					{/* TODO: When dynamic set condition that if description is not there then hide it */}
-					{/* <p className='mb-10 text-white'>
-						Upgrade to premium speakers that are phenomenally built to deliver
-						truly remarkable sound.
-					</p> */}
 					<Link href='/' className='btn btn-white block w-fit'>
 						See Product
 					</Link>
@@ -25,10 +20,9 @@ const Type3 = () => {
 				}}
 				width={1110}
 				height={320}
-				imgClassName={""}
-				pictureClassName={"absolute inset-0 w-[1110px] h-[320px]"}
-				// TODO: Will be product name
-				altText=''
+				imgClassName={"h-full"}
+				pictureClassName={"absolute inset-0 lg:w-[1110px] h-[320px]"}
+				altText='ZX9 SPEAKER'
 			/>
 		</div>
 	);

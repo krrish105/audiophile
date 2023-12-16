@@ -18,7 +18,7 @@ const Type3 = () => {
 					// TODO: Will be product name
 					altText=''
 				/>
-				<div className='rounded-lg z-10 bg-primaryGrey flex justify-center items-center'>
+				<div className='rounded-lg z-10 bg-primaryGrey flex justify-center items-center min-h-[240px]'>
 					<div>
 						<h1 className='heading-4 mb-8 text-black'>YX1 Earphones</h1>
 						{/* TODO: When dynamic set condition that if description is not there then hide it */}

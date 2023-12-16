@@ -40,7 +40,7 @@
 .btn-white {
 	background-color: transparent;
 	border: 1px solid transparent;
-	@apply text-secondaryBlack bg-secondaryBlack;
+	@apply text-secondaryWhite bg-secondaryBlack;
 }
 .btn-white:hover,
 .btn-white:target,
