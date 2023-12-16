@@ -15,7 +15,7 @@ const initialState: ProductState = {
 	cart: [],
 	priceSummary: {
 		total: 0,
-		shipping: 0,
+		shipping: 50,
 		vat: 0,
 		grandTotal: 0,
 	},
@@ -45,6 +45,11 @@ export const cart = createSlice({
 				(product) => (total += product.price * product.quantity)
 			);
 			state.priceSummary.total = total;
+			state.priceSummary.vat = (total / 100) * 20;
+			state.priceSummary.grandTotal =
+				state.priceSummary.total +
+				state.priceSummary.shipping +
+				state.priceSummary.vat;
 		},
 		updateCart: (state, action) => {
 			let cartCopy = [...state.cart];
@@ -62,11 +67,15 @@ export const cart = createSlice({
 				(product) => (total += product.price * product.quantity)
 			);
 			state.priceSummary.total = total;
+			state.priceSummary.vat = (total / 100) * 20;
+			state.priceSummary.grandTotal =
+				state.priceSummary.total +
+				state.priceSummary.shipping +
+				state.priceSummary.vat;
 		},
 		removeAllFromCart: (state, action) => {
 			state.cart = [];
 			state.priceSummary.total = 0;
-			state.priceSummary.shipping = 0;
 			state.priceSummary.vat = 0;
 			state.priceSummary.grandTotal = 0;
 		},
